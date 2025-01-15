@@ -1,0 +1,3 @@
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-deblinux/CMakeFiles/lab1_task3.dir
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-deblinux/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-deblinux/CMakeFiles/rebuild_cache.dir

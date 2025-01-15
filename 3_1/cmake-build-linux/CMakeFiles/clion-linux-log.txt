@@ -1,0 +1,4 @@
+C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/Gregogo/Desktop/os/3_1/cmake-build-linux && /usr/bin/cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/Gregogo/Desktop/os/3_1 -B /mnt/c/Users/Gregogo/Desktop/os/3_1/cmake-build-linux"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Gregogo/Desktop/os/3_1/cmake-build-linux

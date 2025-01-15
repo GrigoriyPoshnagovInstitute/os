@@ -1,0 +1,6 @@
+"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Gregogo\Desktop\os\8_2 -B C:\Users\Gregogo\Desktop\os\8_2\cmake-build-release
+CMake Error at CMakeLists.txt:15 (message):
+  X11 library not found
+
+
+-- Configuring incomplete, errors occurred!

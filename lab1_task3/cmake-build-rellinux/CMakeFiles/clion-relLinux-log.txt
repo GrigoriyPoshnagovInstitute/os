@@ -1,0 +1,4 @@
+C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-rellinux && /usr/bin/cmake -DCMAKE_BUILD_TYPE=MinSizeRel -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/Gregogo/Desktop/os/lab1_task3 -B /mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-rellinux"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-rellinux

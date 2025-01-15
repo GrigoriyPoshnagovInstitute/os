@@ -1,0 +1,3 @@
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-rellinux/CMakeFiles/lab1_task3.dir
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-rellinux/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task3/cmake-build-rellinux/CMakeFiles/rebuild_cache.dir

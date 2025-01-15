@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/lab1_task4.dir/main.cpp.o -o lab1_task4 

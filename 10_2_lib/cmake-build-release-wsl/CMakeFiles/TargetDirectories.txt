@@ -1,0 +1,3 @@
+/mnt/c/Users/Gregogo/Desktop/subjects/os/10_2_lib/cmake-build-release-wsl/CMakeFiles/10_2_lib.dir
+/mnt/c/Users/Gregogo/Desktop/subjects/os/10_2_lib/cmake-build-release-wsl/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Gregogo/Desktop/subjects/os/10_2_lib/cmake-build-release-wsl/CMakeFiles/rebuild_cache.dir

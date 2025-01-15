@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/8_2.dir/main.cpp.o -o 8_2  /usr/lib/x86_64-linux-gnu/libX11.so 

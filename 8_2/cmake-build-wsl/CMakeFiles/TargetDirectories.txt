@@ -1,0 +1,3 @@
+/mnt/c/Users/Gregogo/Desktop/os/8_2/cmake-build-wsl/CMakeFiles/8_2.dir
+/mnt/c/Users/Gregogo/Desktop/os/8_2/cmake-build-wsl/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Gregogo/Desktop/os/8_2/cmake-build-wsl/CMakeFiles/rebuild_cache.dir

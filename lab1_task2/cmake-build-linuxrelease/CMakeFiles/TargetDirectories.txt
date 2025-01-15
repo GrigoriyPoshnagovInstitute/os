@@ -1,0 +1,3 @@
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task2/cmake-build-linuxrelease/CMakeFiles/lab1_task2.dir
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task2/cmake-build-linuxrelease/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Gregogo/Desktop/os/lab1_task2/cmake-build-linuxrelease/CMakeFiles/rebuild_cache.dir

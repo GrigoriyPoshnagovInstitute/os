@@ -1,0 +1,3 @@
+/mnt/c/Users/Gregogo/Desktop/os/3_2/cmake-build-linuxbuild/CMakeFiles/3_2.dir
+/mnt/c/Users/Gregogo/Desktop/os/3_2/cmake-build-linuxbuild/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Gregogo/Desktop/os/3_2/cmake-build-linuxbuild/CMakeFiles/rebuild_cache.dir

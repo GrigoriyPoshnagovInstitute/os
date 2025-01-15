@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,lib10_2_lib.so -o lib10_2_lib.so CMakeFiles/10_2_lib.dir/library.cpp.o CMakeFiles/10_2_lib.dir/main.cpp.o 
