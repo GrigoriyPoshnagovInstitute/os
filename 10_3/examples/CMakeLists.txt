@@ -1,0 +1,2 @@
+add_executable(cppExample cppExample.cpp)
+target_link_libraries(cppExample PRIVATE StudentDatabase)
