@@ -26,10 +26,10 @@ int addStudentC(void *db, const StudentC *student)
                                      student->specialty,
                                      student->enrollmentYear
                              });
-        return 0; // Success
+        return 0;
     } catch (...)
     {
-        return -1; // Error
+        return -1;
     }
 }
 
@@ -39,10 +39,10 @@ int removeStudentC(void *db, unsigned int id)
     {
         auto *database = static_cast<StudentDatabase *>(db);
         database->removeStudent(id);
-        return 0; // Success
+        return 0;
     } catch (...)
     {
-        return -1; // Error
+        return -1;
     }
 }
 
@@ -58,17 +58,17 @@ int getAllStudentsC(void *db, StudentC *results, size_t *count)
         {
             const Student &student = iterator->Next();
             results[i].id = student.id;
-            results[i].name = student.name.c_str();
-            results[i].specialty = student.specialty.c_str();
+            results[i].name = strdup(student.name.c_str());
+            results[i].specialty = strdup(student.specialty.c_str());
             results[i].enrollmentYear = student.enrollmentYear;
             ++i;
         }
 
         *count = i;
-        return 0; // Success
+        return 0;
     } catch (...)
     {
-        return -1; // Error
+        return -1;
     }
 }
 
@@ -84,17 +84,17 @@ int getStudentsByNameC(void *db, const char *name, StudentC *results, size_t *co
         {
             const Student &student = iterator->Next();
             results[i].id = student.id;
-            results[i].name = student.name.c_str();
-            results[i].specialty = student.specialty.c_str();
+            results[i].name = strdup(student.name.c_str());
+            results[i].specialty = strdup(student.specialty.c_str());
             results[i].enrollmentYear = student.enrollmentYear;
             ++i;
         }
 
         *count = i;
-        return 0; // Success
+        return 0;
     } catch (...)
     {
-        return -1; // Error
+        return -1;
     }
 }
 

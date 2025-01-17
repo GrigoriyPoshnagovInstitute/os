@@ -1,0 +1,8 @@
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/CMakeFiles/rebuild_cache.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/src/CMakeFiles/StudentDatabase.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/src/CMakeFiles/edit_cache.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/src/CMakeFiles/rebuild_cache.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/examples/CMakeFiles/cppExample.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/examples/CMakeFiles/edit_cache.dir
+C:/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release/examples/CMakeFiles/rebuild_cache.dir

@@ -21,8 +21,6 @@ public:
     virtual bool HasNext() const = 0;
 
     virtual const Student &Next() = 0;
-
-    virtual std::unique_ptr<IStudentIterator> Clone() const = 0;
 };
 
 class StudentDatabase
@@ -32,7 +30,6 @@ public:
 
     void removeStudent(unsigned int id);
 
-    // Iterator methods
     std::unique_ptr<IStudentIterator> GetAllStudents() const;
 
     std::unique_ptr<IStudentIterator> GetStudentsByName(const std::string &name) const;

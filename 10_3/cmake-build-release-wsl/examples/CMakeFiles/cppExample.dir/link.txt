@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cppExample.dir/cppExample.cpp.o -o cppExample  -Wl,-rpath,/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src ../src/libStudentDatabase.so 

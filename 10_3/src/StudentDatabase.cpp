@@ -55,7 +55,7 @@ public:
 
     bool HasNext() const override
     {
-        return current < end;
+        return current != end;
     }
 
     const Student &Next() override
@@ -67,24 +67,17 @@ public:
         return *students[current++];
     }
 
-    std::unique_ptr<IStudentIterator> Clone() const override
-    {
-        return std::make_unique<ConcreteStudentIterator>(*this);
-    }
-
 private:
     std::vector<const Student *> students;
     size_t current;
     size_t end;
 };
 
-// Method to get iterator for all students
 std::unique_ptr<IStudentIterator> StudentDatabase::GetAllStudents() const
 {
     return std::make_unique<ConcreteStudentIterator>(studentsById);
 }
 
-// Method to get iterator for students by name
 std::unique_ptr<IStudentIterator> StudentDatabase::GetStudentsByName(const std::string &name) const
 {
     auto it = studentsByName.find(name);

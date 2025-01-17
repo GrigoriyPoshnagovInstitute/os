@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="student_database"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\examples\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="StudentDatabase">
+				<Option output="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/libStudentDatabase.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSTUDENT_DATABASE_C_API"/>
+					<Add directory="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 StudentDatabase"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="StudentDatabase/fast">
+				<Option output="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/libStudentDatabase.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSTUDENT_DATABASE_C_API"/>
+					<Add directory="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 StudentDatabase/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cppExample">
+				<Option output="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/cppExample" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSTUDENT_DATABASE_C_API"/>
+					<Add directory="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 cppExample"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cppExample/fast">
+				<Option output="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/cppExample" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSTUDENT_DATABASE_C_API"/>
+					<Add directory="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 cppExample/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/examples/cppExample.cpp">
+			<Option target="cppExample"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseCApi.cpp">
+			<Option target="StudentDatabase"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseCApi.h">
+			<Option target="StudentDatabase"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseWrapper.cpp">
+			<Option target="StudentDatabase"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseWrapper.h">
+			<Option target="StudentDatabase"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
