@@ -69,10 +69,24 @@ include src/CMakeFiles/StudentDatabase.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/StudentDatabase.dir/flags.make
 
+src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o: src/CMakeFiles/StudentDatabase.dir/flags.make
+src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o: ../src/StudentDatabase.cpp
+src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o: src/CMakeFiles/StudentDatabase.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o"
+	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o -MF CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o.d -o CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o -c /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabase.cpp
+
+src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.i"
+	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabase.cpp > CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.i
+
+src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.s"
+	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabase.cpp -o CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.s
+
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o: src/CMakeFiles/StudentDatabase.dir/flags.make
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o: ../src/StudentDatabaseCApi.cpp
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o: src/CMakeFiles/StudentDatabase.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o"
 	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o -MF CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o.d -o CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o -c /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseCApi.cpp
 
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.i: cmake_force
@@ -86,7 +100,7 @@ src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.s: cmake_force
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o: src/CMakeFiles/StudentDatabase.dir/flags.make
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o: ../src/StudentDatabaseWrapper.cpp
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o: src/CMakeFiles/StudentDatabase.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o"
 	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o -MF CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o.d -o CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o -c /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseWrapper.cpp
 
 src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.i: cmake_force
@@ -99,17 +113,19 @@ src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.s: cmake_force
 
 # Object files for target StudentDatabase
 StudentDatabase_OBJECTS = \
+"CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o" \
 "CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o" \
 "CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o"
 
 # External object files for target StudentDatabase
 StudentDatabase_EXTERNAL_OBJECTS =
 
+src/libStudentDatabase.so: src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o
 src/libStudentDatabase.so: src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o
 src/libStudentDatabase.so: src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o
 src/libStudentDatabase.so: src/CMakeFiles/StudentDatabase.dir/build.make
 src/libStudentDatabase.so: src/CMakeFiles/StudentDatabase.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libStudentDatabase.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libStudentDatabase.so"
 	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StudentDatabase.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

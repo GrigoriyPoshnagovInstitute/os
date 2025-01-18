@@ -77,6 +77,14 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_StudentDatabase: phony || src/CMakeFiles/StudentDatabase.dir
 
+build src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.obj: CXX_COMPILER__StudentDatabase_unscanned_RelWithDebInfo C$:/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabase.cpp || cmake_object_order_depends_target_StudentDatabase
+  DEFINES = -DSTUDENT_DATABASE_C_API -DStudentDatabase_EXPORTS
+  DEP_FILE = src\CMakeFiles\StudentDatabase.dir\StudentDatabase.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Gregogo/Desktop/subjects/os/10_3/src
+  OBJECT_DIR = src\CMakeFiles\StudentDatabase.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\StudentDatabase.dir
+
 build src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.obj: CXX_COMPILER__StudentDatabase_unscanned_RelWithDebInfo C$:/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseCApi.cpp || cmake_object_order_depends_target_StudentDatabase
   DEFINES = -DSTUDENT_DATABASE_C_API -DStudentDatabase_EXPORTS
   DEP_FILE = src\CMakeFiles\StudentDatabase.dir\StudentDatabaseCApi.cpp.obj.d
@@ -101,7 +109,7 @@ build src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.obj: CXX_COM
 #############################################
 # Link the shared library src\libStudentDatabase.dll
 
-build src/libStudentDatabase.dll src/libStudentDatabase.dll.a: CXX_SHARED_LIBRARY_LINKER__StudentDatabase_RelWithDebInfo src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.obj src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.obj
+build src/libStudentDatabase.dll src/libStudentDatabase.dll.a: CXX_SHARED_LIBRARY_LINKER__StudentDatabase_RelWithDebInfo src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.obj src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.obj src/CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = src\CMakeFiles\StudentDatabase.dir

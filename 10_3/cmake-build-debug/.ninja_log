@@ -1,7 +1,0 @@
-# ninja log v5
-3	981	7587187121227029	src/CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.obj	7580d7761041a02f
-58	2351	7587176183979221	src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.obj	af75cb553a8106cf
-63	2025	7587176180656587	examples/CMakeFiles/cppExample.dir/cppExample.cpp.obj	5d4cf882970c2398
-982	1224	7587187123598597	src/libStudentDatabase.dll	999687fdf335d489
-982	1224	7587187123598597	src/libStudentDatabase.dll.a	999687fdf335d489
-2621	2738	7587176187834702	examples/cppExample.exe	ff80cdbff52ad399

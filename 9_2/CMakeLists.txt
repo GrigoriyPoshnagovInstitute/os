@@ -1,18 +1,36 @@
-cmake_minimum_required(VERSION 3.26)
-project(9_2)
+cmake_minimum_required(VERSION 3.16)
 
-set(BOOST_ROOT "C:/Users/Gregogo/Downloads/boost_1_87_0")
-
-include_directories("C:/Users/Gregogo/Downloads/boost_1_87_0")
-# Указываем какие компоненты Boost использовать (например, только Asio)
-#find_package(Boost 1.87.0 REQUIRED COMPONENTS asio)
-
-# Указываем директории для включения заголовочных файлов Boost
-include_directories(${Boost_INCLUDE_DIRS})
-
-# Указываем библиотеки Boost (если они необходимы)
-link_directories(${Boost_LIBRARY_DIRS})
+project(Whiteboard)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(9_2 main.cpp)
+# Указываем пути к Qt и Boost
+set(CMAKE_PREFIX_PATH "C:/Qt/6.8.1/mingw_64/lib/cmake;C:/vs/vcpkg/installed/x64-windows/share/boost")
+
+# Ищем Boost
+find_package(Boost REQUIRED COMPONENTS system headers)
+
+# Ищем Qt6
+find_package(Qt6 REQUIRED COMPONENTS Widgets Network)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+# Источники
+set(SOURCES
+        main.cpp
+        WhiteboardApp.cpp
+        WhiteboardApp.h
+        Server.cpp
+        Server.h
+        Client.cpp
+        Client.h
+)
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Boost::system Boost::headers)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Network Boost::system)
+target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32)
+target_link_libraries(Whiteboard PRIVATE ws2_32 mswsock)

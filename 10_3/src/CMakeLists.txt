@@ -1,4 +1,6 @@
 add_library(StudentDatabase SHARED
+        StudentDatabase.cpp
+        StudentDatabase.h
         StudentDatabaseCApi.cpp
         StudentDatabaseCApi.h
         StudentDatabaseWrapper.cpp

@@ -5,76 +5,91 @@
 #include <mutex>
 #include <algorithm>
 #include <iostream>
-#include <memory> // For std::construct_at and std::destroy_at
+#include <memory>
 
 class MemoryManager
 {
 public:
-    MemoryManager(void* start, size_t size) noexcept
-            : m_start(static_cast<uint8_t*>(start)), m_size(size)
+    MemoryManager(void *start, size_t size) noexcept
+            : m_start(static_cast<uint8_t *>(start)), m_size(size)
     {
         assert(reinterpret_cast<uintptr_t>(start) % alignof(std::max_align_t) == 0);
         assert(size >= sizeof(MemoryBlock));
 
-        // Construct the initial MemoryBlock using placement new and std::construct_at
-        m_freeList = std::construct_at<MemoryBlock>(reinterpret_cast<MemoryManager::MemoryBlock *>(m_start), size - sizeof(MemoryBlock), nullptr);
+        uintptr_t startAddress = reinterpret_cast<uintptr_t>(m_start);
+        size_t alignment = alignof(MemoryBlock);
+        size_t padding = (alignment - (startAddress % alignment)) % alignment;
+
+        uint8_t *alignedStart = m_start + padding;
+        size_t alignedSize = size - padding;
+
+        assert(alignedSize >= sizeof(MemoryBlock));
+
+        m_freeList = std::construct_at<MemoryBlock>(
+                reinterpret_cast<MemoryBlock *>(alignedStart),
+                alignedSize - sizeof(MemoryBlock),
+                nullptr
+        );
     }
 
     ~MemoryManager()
     {
-        // Destroy all MemoryBlocks in the free list
-        MemoryBlock* current = m_freeList;
+        MemoryBlock *current = m_freeList;
         while (current)
         {
-            MemoryBlock* next = current->nextBlock;
+            MemoryBlock *next = current->nextBlock;
             std::destroy_at(current);
             current = next;
         }
     }
 
-    void* Allocate(size_t size, size_t align = alignof(std::max_align_t)) noexcept
+    void *Allocate(size_t size, size_t align = alignof(std::max_align_t)) noexcept
     {
         if (size == 0 || (align & (align - 1)) != 0)
-        {
             return nullptr;
-        }
 
         std::lock_guard<std::mutex> lock(m_mutex);
 
-        MemoryBlock* prevBlock = nullptr;
-        MemoryBlock* currentBlock = m_freeList;
+        MemoryBlock *prevBlock = nullptr;
+        MemoryBlock *currentBlock = m_freeList;
 
         while (currentBlock)
         {
             uintptr_t blockStart = reinterpret_cast<uintptr_t>(currentBlock + 1);
-            uintptr_t alignedStart = (blockStart + (align - 1)) & ~(align - 1);
-            size_t padding = alignedStart - blockStart;
+            uintptr_t dataAddress = (blockStart + (align - 1)) & ~(align - 1);
 
-            if (currentBlock->blockSize >= size + padding)
+            size_t dataPadding = dataAddress - blockStart;
+
+            if (currentBlock->blockSize >= size + dataPadding)
             {
-                size_t remainingSize = currentBlock->blockSize - (size + padding);
-                if (remainingSize >= sizeof(MemoryBlock))
+                // тут, если остается место, вставляем новый пустой блок
+                size_t blockAlign = alignof(MemoryBlock);
+                size_t blockPadding = ((blockAlign - (size + dataPadding) % blockAlign) % blockAlign);
+                size_t remainingSize = currentBlock->blockSize - (size + dataPadding) - blockPadding;
+
+                if (remainingSize >= sizeof(MemoryBlock) + blockPadding)
                 {
-                    // Construct the new MemoryBlock using std::construct_at
+                    auto blockAddress = dataAddress + size + blockPadding;
+                    assert(blockAddress % alignof(MemoryBlock) == 0);
+
                     auto newBlock = std::construct_at<MemoryBlock>(
-                            reinterpret_cast<MemoryBlock*>(alignedStart + size),
+                            reinterpret_cast<MemoryBlock *>(blockAddress),
                             remainingSize,
                             currentBlock->nextBlock
                     );
+
                     currentBlock->nextBlock = newBlock;
                 }
+                // дальше идет основная логика
 
                 if (prevBlock)
-                {
                     prevBlock->nextBlock = currentBlock->nextBlock;
-                }
                 else
-                {
                     m_freeList = currentBlock->nextBlock;
-                }
 
-                currentBlock->blockSize = size + padding;
-                return reinterpret_cast<void*>(alignedStart);
+                currentBlock->blockSize = size + dataPadding;
+                assert(dataAddress % align == 0);
+                return reinterpret_cast<void *>(dataAddress);
             }
 
             prevBlock = currentBlock;
@@ -84,7 +99,7 @@ public:
         return nullptr;
     }
 
-    void Free(void* addr) noexcept
+    void Free(void *addr) noexcept
     {
         if (!addr)
         {
@@ -93,14 +108,14 @@ public:
 
         std::lock_guard<std::mutex> lock(m_mutex);
 
-        auto block = reinterpret_cast<MemoryBlock*>(
-                static_cast<uint8_t*>(addr) - sizeof(MemoryBlock));
+        auto block = reinterpret_cast<MemoryBlock *>(
+                static_cast<uint8_t *>(addr) - sizeof(MemoryBlock));
 
-        assert(reinterpret_cast<uint8_t*>(block) >= m_start &&
-               reinterpret_cast<uint8_t*>(block) < m_start + m_size);
+        assert(reinterpret_cast<uint8_t *>(block) >= m_start &&
+               reinterpret_cast<uint8_t *>(block) < m_start + m_size);
 
-        MemoryBlock* prevBlock = nullptr;
-        MemoryBlock* currentBlock = m_freeList;
+        MemoryBlock *prevBlock = nullptr;
+        MemoryBlock *currentBlock = m_freeList;
 
         while (currentBlock && currentBlock < block)
         {
@@ -127,34 +142,32 @@ public:
         {
             MergeBlocks(block, currentBlock);
         }
-
-        // Destroy the MemoryBlock if it's no longer in use
-        // Note: Destruction should be handled in the destructor
     }
 
 private:
     struct MemoryBlock
     {
         size_t blockSize;
-        MemoryBlock* nextBlock;
+        MemoryBlock *nextBlock;
 
-        // Default constructor for std::construct_at
-        MemoryBlock(size_t size, MemoryBlock* next) noexcept
-                : blockSize(size), nextBlock(next) {}
+        MemoryBlock(size_t size, MemoryBlock *next) noexcept
+                : blockSize(size), nextBlock(next)
+        {}
     };
 
-    uint8_t* m_start;
+    uint8_t *m_start;
     size_t m_size;
-    MemoryBlock* m_freeList;
+    MemoryBlock *m_freeList;
     std::mutex m_mutex;
 
-    void MergeBlocks(MemoryBlock* prev, MemoryBlock* current) noexcept
+    static void MergeBlocks(MemoryBlock *prev, MemoryBlock *current) noexcept
     {
-        if (prev && reinterpret_cast<uint8_t*>(prev) + prev->blockSize + sizeof(MemoryBlock) == reinterpret_cast<uint8_t*>(current))
+        if (prev && reinterpret_cast<uint8_t *>(prev) + prev->blockSize + sizeof(MemoryBlock) ==
+                    reinterpret_cast<uint8_t *>(current))
         {
             prev->blockSize += current->blockSize + sizeof(MemoryBlock);
             prev->nextBlock = current->nextBlock;
-            // Destroy the merged block
+
             std::destroy_at(current);
         }
     }

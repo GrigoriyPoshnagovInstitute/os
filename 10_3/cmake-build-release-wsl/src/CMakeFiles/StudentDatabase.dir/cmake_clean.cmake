@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o"
+  "CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o.d"
   "CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o"
   "CMakeFiles/StudentDatabase.dir/StudentDatabaseCApi.cpp.o.d"
   "CMakeFiles/StudentDatabase.dir/StudentDatabaseWrapper.cpp.o"

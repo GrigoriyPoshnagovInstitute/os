@@ -114,12 +114,12 @@ src/clean: src/CMakeFiles/StudentDatabase.dir/clean
 src/CMakeFiles/StudentDatabase.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/StudentDatabase.dir/build.make src/CMakeFiles/StudentDatabase.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/StudentDatabase.dir/build.make src/CMakeFiles/StudentDatabase.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=1,2,3 "Built target StudentDatabase"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=1,2,3,4 "Built target StudentDatabase"
 .PHONY : src/CMakeFiles/StudentDatabase.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/StudentDatabase.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/StudentDatabase.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles 0
 .PHONY : src/CMakeFiles/StudentDatabase.dir/rule
@@ -140,12 +140,12 @@ src/CMakeFiles/StudentDatabase.dir/clean:
 examples/CMakeFiles/cppExample.dir/all: src/CMakeFiles/StudentDatabase.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cppExample.dir/build.make examples/CMakeFiles/cppExample.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cppExample.dir/build.make examples/CMakeFiles/cppExample.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=4,5 "Built target cppExample"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles --progress-num=5,6 "Built target cppExample"
 .PHONY : examples/CMakeFiles/cppExample.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/cppExample.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/cppExample.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl/CMakeFiles 0
 .PHONY : examples/CMakeFiles/cppExample.dir/rule

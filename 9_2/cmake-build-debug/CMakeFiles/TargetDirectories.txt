@@ -1,3 +1,5 @@
-C:/Users/Gregogo/Desktop/subjects/os/9_2/cmake-build-debug/CMakeFiles/9_2.dir
+C:/Users/Gregogo/Desktop/subjects/os/9_2/cmake-build-debug/CMakeFiles/Whiteboard.dir
 C:/Users/Gregogo/Desktop/subjects/os/9_2/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/Gregogo/Desktop/subjects/os/9_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Gregogo/Desktop/subjects/os/9_2/cmake-build-debug/CMakeFiles/Whiteboard_autogen_timestamp_deps.dir
+C:/Users/Gregogo/Desktop/subjects/os/9_2/cmake-build-debug/CMakeFiles/Whiteboard_autogen.dir

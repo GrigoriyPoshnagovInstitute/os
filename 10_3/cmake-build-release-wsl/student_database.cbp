@@ -137,6 +137,12 @@
 		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/examples/cppExample.cpp">
 			<Option target="cppExample"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabase.cpp">
+			<Option target="StudentDatabase"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabase.h">
+			<Option target="StudentDatabase"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/src/StudentDatabaseCApi.cpp">
 			<Option target="StudentDatabase"/>
 		</Unit>

@@ -130,6 +130,30 @@ StudentDatabase/fast:
 	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/StudentDatabase.dir/build.make src/CMakeFiles/StudentDatabase.dir/build
 .PHONY : StudentDatabase/fast
 
+StudentDatabase.o: StudentDatabase.cpp.o
+.PHONY : StudentDatabase.o
+
+# target to build an object file
+StudentDatabase.cpp.o:
+	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/StudentDatabase.dir/build.make src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.o
+.PHONY : StudentDatabase.cpp.o
+
+StudentDatabase.i: StudentDatabase.cpp.i
+.PHONY : StudentDatabase.i
+
+# target to preprocess a source file
+StudentDatabase.cpp.i:
+	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/StudentDatabase.dir/build.make src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.i
+.PHONY : StudentDatabase.cpp.i
+
+StudentDatabase.s: StudentDatabase.cpp.s
+.PHONY : StudentDatabase.s
+
+# target to generate assembly for a file
+StudentDatabase.cpp.s:
+	cd /mnt/c/Users/Gregogo/Desktop/subjects/os/10_3/cmake-build-release-wsl && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/StudentDatabase.dir/build.make src/CMakeFiles/StudentDatabase.dir/StudentDatabase.cpp.s
+.PHONY : StudentDatabase.cpp.s
+
 StudentDatabaseCApi.o: StudentDatabaseCApi.cpp.o
 .PHONY : StudentDatabaseCApi.o
 
@@ -187,6 +211,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... StudentDatabase"
+	@echo "... StudentDatabase.o"
+	@echo "... StudentDatabase.i"
+	@echo "... StudentDatabase.s"
 	@echo "... StudentDatabaseCApi.o"
 	@echo "... StudentDatabaseCApi.i"
 	@echo "... StudentDatabaseCApi.s"

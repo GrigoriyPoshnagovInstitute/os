@@ -1,55 +1,47 @@
-#include <boost/asio.hpp>
+#include <QApplication>
 #include <iostream>
-#include <thread>
-#include <vector>
-#include <memory>
-#include <mutex>
+#include "WhiteboardApp.h"
 
-using boost::asio::ip::tcp;
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
 
-class DrawingServer {
-public:
-    DrawingServer(boost::asio::io_context& io_context, short port)
-            : acceptor_(io_context, tcp::endpoint(tcp::v4(), port)) {
-        startAccept();
+    if (argc < 3) {
+        std::cerr << "Usage: whiteboard <mode> <port> [address]" << std::endl;
+        std::cerr << "Mode can be 'server' or 'client'" << std::endl;
+        return -1;
     }
 
-private:
-    void startAccept() {
-        // Передаем executor из acceptor, который уже связан с io_context
-        auto socket = std::make_shared<tcp::socket>(acceptor_.get_executor());
-
-        acceptor_.async_accept(*socket, [this, socket](boost::system::error_code ec) {
-            if (!ec) {
-                std::lock_guard<std::mutex> lock(mutex_);
-                clients_.push_back(socket);
-                startRead(socket);
-            }
-            startAccept();
-        });
+    std::string mode = argv[1];
+    unsigned short port;
+    try {
+        port = std::stoi(argv[2]);
+    } catch (const std::invalid_argument &e) {
+        std::cerr << "Invalid port: " << argv[2] << std::endl;
+        std::cerr << "Error: " << e.what() << std::endl;
+        return -1;
     }
 
-    void startRead(const std::shared_ptr<tcp::socket>& socket) {
-        auto buffer = std::make_shared<std::vector<char>>(1024);
-        socket->async_read_some(boost::asio::buffer(*buffer), [this, socket, buffer](boost::system::error_code ec, std::size_t length) {
-            if (!ec) {
-                broadcastMessage(std::string(buffer->data(), length));
-                startRead(socket);
-            } else {
-                std::lock_guard<std::mutex> lock(mutex_);
-                clients_.erase(std::remove(clients_.begin(), clients_.end(), socket), clients_.end());
-            }
-        });
+    QString address;
+    if (mode == "client" && argc >= 4) {
+        address = QString::fromStdString(argv[3]);
+    } else if (mode == "client") {
+        std::cerr << "Client mode requires address." << std::endl;
+        return -1;
     }
 
-    void broadcastMessage(const std::string& message) {
-        std::lock_guard<std::mutex> lock(mutex_);
-        for (auto& client : clients_) {
-            boost::asio::async_write(*client, boost::asio::buffer(message), [](boost::system::error_code, std::size_t) {});
-        }
+    WhiteboardApp *appWindow = nullptr;
+    if (mode == "server") {
+        appWindow = new WhiteboardApp(port);
+    } else if (mode == "client" && !address.isEmpty()) {
+        appWindow = new WhiteboardApp(port, address);
+    } else {
+        std::cerr << "Invalid arguments!" << std::endl;
+        return -1;
     }
 
-    tcp::acceptor acceptor_;
-    std::vector<std::shared_ptr<tcp::socket>> clients_;
-    std::mutex mutex_;
-};
+    if (appWindow) {
+        appWindow->show();
+    }
+
+    return app.exec();
+}
